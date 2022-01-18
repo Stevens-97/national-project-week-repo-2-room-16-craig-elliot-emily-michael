@@ -7,7 +7,7 @@ function App() {
    React.useEffect(() => {
       async function getMessage() {
          console.log("useEffect in action");
-         const response = await fetch("http://localhost:5001");
+         const response = await fetch("http://localhost:5001/bootcamp/test");
          const data = await response.json();
          setData(data);
          console.log(data.message);
@@ -17,7 +17,7 @@ function App() {
 
    return (
       <div className="App">
-         <p>{!data ? "Loading..." : data}</p>
+         <p>I'm working, check the console!</p>
       </div>
    );
 }
