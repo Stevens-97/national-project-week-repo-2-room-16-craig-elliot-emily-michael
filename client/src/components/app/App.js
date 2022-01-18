@@ -1,20 +1,25 @@
-import React from "react"
-import './App.css';
+import React from "react";
+import "./App.css";
 
 function App() {
-  const [data, setData] = React.useState(null);
+   const [data, setData] = React.useState(null);
 
-  React.useEffect(() => {
-    fetch("/http://localhost:5001")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
+   React.useEffect(() => {
+      async function getMessage() {
+         console.log("useEffect in action");
+         const response = await fetch("http://localhost:5001");
+         const data = await response.json();
+         setData(data);
+         console.log(data.message);
+      }
+      getMessage();
+   }, []);
 
-  return (
-    <div className="App">
-             <p>{!data ? "Loading..." : data}</p>
-    </div>
-  );
+   return (
+      <div className="App">
+         <p>{!data ? "Loading..." : data}</p>
+      </div>
+   );
 }
 
 export default App;
