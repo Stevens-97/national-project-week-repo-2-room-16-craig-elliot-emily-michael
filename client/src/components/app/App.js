@@ -7,7 +7,7 @@ function App() {
    React.useEffect(() => {
       async function getMessage() {
          console.log("useEffect in action");
-         const response = await fetch("http://localhost:5001/bootcamp/test");
+         const response = await fetch("http://localhost:5001/test");
          const data = await response.json();
          setData(data);
          console.log(data.message);
