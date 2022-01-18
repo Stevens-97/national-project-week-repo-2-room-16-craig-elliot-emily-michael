@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import Header from "../Home/Header";
+import FeedbackIndex from "../FeedbackSection";
+import HomeIndex from "../Home";
 
 function App() {
 
@@ -10,10 +12,11 @@ function App() {
       <nav>
       <Header/>
       </nav>
-      
+      <Routes>
+        <Route path="/" element={<HomeIndex />} />
+        <Route path="/feedback" element={<FeedbackIndex />} />
+      </Routes>
       <div className="App">
-       
-        <p>I'm working, check the console!</p>
       </div>
     </div>
    );
