@@ -1,25 +1,28 @@
 import React from "react";
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
-function App() {
+import Header from "../Home/Header";
 
+function App() {
 
   return (
     <div>
       <nav>
-        <Link to="/">Home</Link>
+      <Header/>
       </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="feedback" element={<FeedbackSection />} />
-      </Routes>
+      
       <div className="App">
+       
         <p>I'm working, check the console!</p>
       </div>
     </div>
    );
 }
 
+/*<Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="feedback" element={<FeedbackSection />} />
+      </Routes>*/
 export default App;
 
 
