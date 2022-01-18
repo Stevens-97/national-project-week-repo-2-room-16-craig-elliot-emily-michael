@@ -1,10 +1,8 @@
 import React from 'react'
 
-export default function DropDownInput() {
+export default function DropDownInput({value}) {
     
     return (
-        <div>
-            
-        </div>
+        <option value={value}>{value}</option>
     )
 }
