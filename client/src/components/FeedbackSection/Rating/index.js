@@ -14,8 +14,8 @@ export default function Rating({title}) {
             
             </div>
             <div className='rating-emojis'>
-            <label for="1">🙃</label>
-            <label for="5">🙂</label>
+                <label for="1">🙃</label>
+                <label for="5">🙂</label>
             </div>
             </form>
         </div>

@@ -18,18 +18,19 @@ h2 {
 }
 
 .ratings {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: initial;
-    background-color: black; 
+    display: inline;
+    width: 14em;
+    /* background-color: black;  */
     
 }
 
 .rating-emojis {
-
+    display: flex;
+    justify-content:space-between;
 }
 
 .rating-inputs {
+    display: flex;
+    justify-content:space-evenly
 
 }
