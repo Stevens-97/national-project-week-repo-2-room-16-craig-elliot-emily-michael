@@ -4,4 +4,6 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin: 2em 15em;
+    padding-bottom: 3em;
 }

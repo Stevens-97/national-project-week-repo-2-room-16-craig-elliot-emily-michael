@@ -1,0 +1,11 @@
+.feedbackHeader {
+    background-color: #4B8253;
+    text-align: center;
+    margin: 2em;
+    padding: 0.3em 0em 0.3em 0em;
+}
+
+.feedbacklink {
+    text-decoration: none;
+    color: #DAD7CC;
+}

@@ -2,4 +2,12 @@
     background-color: #2C4F40;
     text-align: center;
     padding: 1em 0em 1em 0em;
+    color: inherit;
+    color: #DAD7CC;
+    text-decoration: none;
+}
+
+.homelink {
+    text-decoration: none;
+    color: #DAD7CC;
 }

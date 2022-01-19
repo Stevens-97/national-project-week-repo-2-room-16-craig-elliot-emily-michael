@@ -5,8 +5,8 @@ import './style.css'
 export default function Header() {
     return (
         <div className='header'>
-        <Link to="/">
-            <h1>
+        <Link to="/" className='homelink'>
+            <h1 >
                 School of Code Bootcamper Portal
             </h1>
             </Link>
