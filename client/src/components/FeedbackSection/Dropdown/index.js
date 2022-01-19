@@ -20,17 +20,13 @@ export default function Dropdown({title , name}) {
                 return <DropdownInput value = {bootcamper.name} />
             })
             }
-                
             </select>
-
             <label for="Cohort">Cohort</label>
             <select>
             {bootcamps.map((bootcamp)=>{
                 return <DropdownInput value = {bootcamp} />
             })}
             </select>
-
-
         </div>
     )
 }
