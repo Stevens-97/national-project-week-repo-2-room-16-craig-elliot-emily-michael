@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import DropdownInput from '../DropdownInput'
-
+import './style.css'
 
 
 export default function BasicDropdown({title , data}) {
@@ -10,7 +10,8 @@ export default function BasicDropdown({title , data}) {
        
         <div>
             <label for={title}>{title}</label>
-            <select>
+            <br></br>
+            <select className='input-box'>
             {dataSet.map((item)=>{
                 return <DropdownInput value = {item.value} />
             })

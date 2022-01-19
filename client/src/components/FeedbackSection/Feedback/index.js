@@ -4,7 +4,8 @@ export default function Feedback({text}) {
     return (
         <div>
             <label>{text}</label>
-            <textarea ></textarea>
+            <br></br>
+            <textarea className='input-box'></textarea>
         </div>
     )
 }

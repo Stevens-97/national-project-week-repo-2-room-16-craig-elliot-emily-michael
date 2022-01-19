@@ -21,7 +21,7 @@ export default function FeedbackIndex() {
            <BasicDropdown title={'Name'} data={bootcampers}/>
            <BasicDropdown title={'Cohort'} data={bootcamps}/>
            <TimeInput />
-           <Feedback />
+           <Feedback text={'Daily Feedback'}/>
            <Rating title={'Workshops / Lectures'}/>
            <Rating title={'Guest Lectures'}/>
            <Rating title={'Mood'}/>

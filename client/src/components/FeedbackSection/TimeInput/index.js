@@ -3,7 +3,9 @@ import React from 'react'
 export default function TimeInput() {
     return (
         <div>
-            <input type="date" ></input>
+            <label>Date</label>
+            <br></br>
+            <input className='input-box' type="date" ></input>
         </div>
     )
 }
