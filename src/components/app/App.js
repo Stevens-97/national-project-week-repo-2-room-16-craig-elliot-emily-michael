@@ -10,15 +10,15 @@ function App() {
 
    // const REACT_APP_API_URL = "https://room16-project.herokuapp.com/"
 
-   React.useEffect(() => {
-      async function getUrl() {
-         console.log("function called");
-         const response = await fetch(`https://room16-project.herokuapp.com/`);
-         const data = await response.json();
-         console.log(data);
-      }
-      getUrl();
-   }, []);
+   // React.useEffect(() => {
+   //    async function getUrl() {
+   //       console.log("function called");
+   //       const response = await fetch(`https://room16-project.herokuapp.com/`);
+   //       const data = await response.json();
+   //       console.log(data);
+   //    }
+   //    getUrl();
+   // }, []);
 
    return (
       <div>

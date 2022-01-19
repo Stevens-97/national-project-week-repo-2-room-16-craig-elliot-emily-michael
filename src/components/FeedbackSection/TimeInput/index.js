@@ -1,11 +1,15 @@
 import React from 'react'
 
-export default function TimeInput() {
+export default function TimeInput({setValue}) {
+    function handleEvent(e){
+        console.log("click!",e.target.value)
+        setValue(e.target.value)
+    }
     return (
         <div>
             <label>Date</label>
             <br></br>
-            <input className='input-box' type="date" ></input>
+            <input onChange={handleEvent} className='input-box' type="date" ></input>
         </div>
     )
 }
