@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 export default function Submit({postData}) {
         // Sending off the data to database
         async function sendPostData(postData){
+            console.log("POST DATA HERE", postData)
             const res = await fetch("https://room16-project.herokuapp.com/users/",{
             method: 'POST',
             body: JSON.stringify(postData),
@@ -16,7 +17,7 @@ export default function Submit({postData}) {
         function handleSubmit(e){
             e.preventDefault()
             console.log("handle submit working, here is the post data",postData )
-            sendPostData()
+            sendPostData(postData)
         }
     
     return (
