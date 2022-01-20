@@ -23,4 +23,9 @@ const emptyFeedback ={
     userFeelingRating: "",
     bootcamperOfTheWeek: "",
 }
-export {bootcampData , bootcamperData,emptyFeedback }
+
+const emptyAnonFeedback= {
+    date: "",
+    feedback: "",
+}
+export {bootcampData , bootcamperData,emptyFeedback,emptyAnonFeedback }

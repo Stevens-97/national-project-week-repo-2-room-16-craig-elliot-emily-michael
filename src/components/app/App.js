@@ -4,6 +4,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Header from "../Home/Header";
 import FeedbackIndex from "../FeedbackSection";
 import HomeIndex from "../Home";
+import AnonymousFeedbackSection from "../FeedbackSection/AnonymousFeedbackSection/index.js"
 
 function App() {
    // Use this for the backend url REACT_APP_API_URL = https://room16-project.herokuapp.com/
@@ -28,6 +29,7 @@ function App() {
          <Routes>
             <Route path="/" element={<HomeIndex />} />
             <Route path="/feedback" element={<FeedbackIndex />} />
+            <Route path="/AnonymousFB" element={<AnonymousFeedbackSection />}/>
          </Routes>
          <div className="App"></div>
       </div>

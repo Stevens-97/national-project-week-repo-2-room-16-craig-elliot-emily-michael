@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
-export default function Submit({ postData }) {
+export default function Submit({ postData, link}) {
    // Sending off the data to database
    async function sendPostData(postData) {
       console.log("POST DATA HERE", postData);
@@ -23,9 +24,11 @@ export default function Submit({ postData }) {
 
    return (
       <div>
-         <button type="submit" onClick={handleSubmit}>
-            Submit
-         </button>
+         
+            <button type="submit" onClick={handleSubmit}>
+            <Link to={link} className='feedbacklink'> Submit</Link>
+            </button>
+         
       </div>
    );
 }
