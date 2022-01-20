@@ -26,7 +26,7 @@ export default function SubmitButton({ postData, link }) {
    return (
       <div>
          
-            <button type="submit" onClick={handleSubmit}>
+            <button className='submit-buttons' type="submit" onClick={handleSubmit}>
             <Link to={link} className='feedbacklink'> Submit</Link>
             </button>
          

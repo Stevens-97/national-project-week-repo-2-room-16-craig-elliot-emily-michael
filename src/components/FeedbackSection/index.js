@@ -63,13 +63,17 @@ export default function FeedbackIndex() {
             setValue={setBootcamper}
             title={"Name"}
             data={bootcampers}
+            className='first-inputs'
          />
          <BasicDropdown
             setValue={setBootcamp}
             title={"Cohort"}
             data={bootcamps}
+            className='first-inputs'
          />
-         <TimeInput setValue={setTodaysDate} />
+         <TimeInput setValue={setTodaysDate} 
+            className='first-inputs'
+         />
          <Feedback setValue={setFeedbackInput} text={"Daily Feedback"} />
          <Rating
             setValue={setWorkShopLectures}

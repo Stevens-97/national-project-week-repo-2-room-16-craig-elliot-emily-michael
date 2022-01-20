@@ -16,7 +16,7 @@ export default function AnonymousFeedbackSection() {
         compileData()
     }, [time,givenFeedback])
 
-  return <div>
+  return <div className='feedback-section'>
         <Title text={"Thanks For Giving Your Feedback!"}/>
         <TimeInput setValue={setTime}/>
         <Feedback setValue={setGivenFeedback} text={"Anything else? This is anonymous."} />

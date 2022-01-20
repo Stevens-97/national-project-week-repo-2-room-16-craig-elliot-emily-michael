@@ -8,6 +8,12 @@
     padding-bottom: 3em;
     font-size: 1.5em;
     min-width: 22em;
+    text-align: center;
+}
+
+first-inputs {
+    text-align: left;
+    justify-content: left;
 }
 
 h2 {
@@ -32,6 +38,13 @@ h2 {
 
 .rating-inputs {
     display: flex;
-    justify-content:space-evenly
+    justify-content:space-evenly;
 
+}
+
+.submit-buttons {
+    background-color: #2F5B3E;
+    width: 10em;
+    height: 3em;
+    margin-top: 2em;
 }
