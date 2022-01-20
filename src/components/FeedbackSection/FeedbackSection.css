@@ -10,18 +10,23 @@
     min-width: 22em;
     text-align: center;
 }
+h1 {
+    font-size: 2em
+}
+
+h2 {
+    font-size: 1.5em;
+}
 
 first-inputs {
     text-align: left;
     justify-content: left;
 }
 
-h2 {
-    font-size: 2em;
-}
 .input-box{
     width: 25em; 
     max-width: 25em;
+    min-width: 25em;
 }
 
 .ratings {
