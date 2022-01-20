@@ -35,6 +35,7 @@ first-inputs {
     width: 25em; 
     max-width: 25em;
     min-width: 25em;
+    background-color: #DAD7CC;
 }
 
 .ratings {
@@ -52,7 +53,6 @@ first-inputs {
 .rating-inputs {
     display: flex;
     justify-content:space-evenly;
-
 }
 
 .submit-buttons {

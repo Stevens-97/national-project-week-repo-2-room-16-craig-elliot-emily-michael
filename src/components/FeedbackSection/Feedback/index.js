@@ -9,7 +9,7 @@ export default function Feedback({text, setValue}) {
         <div>
             <label>{text}</label>
             <br></br>
-            <textarea onChange={handleEvent}className='input-box'></textarea>
+            <textarea onChange={handleEvent} className='input-box'></textarea>
         </div>
     )
 }

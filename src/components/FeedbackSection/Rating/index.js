@@ -6,7 +6,7 @@ export default function Rating({title, setValue}) {
         setValue(Number(e.target.value))
     }
     return (
-        <div className='input-box ratings'>
+        <div className='ratings'>
         <form>
             <p>{title}</p>
             <div className='rating-inputs'>
