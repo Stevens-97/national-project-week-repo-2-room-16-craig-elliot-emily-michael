@@ -44,7 +44,8 @@ h2 {
 
 .submit-buttons {
     background-color: #2F5B3E;
-    width: 10em;
-    height: 3em;
+    width: 7em;
+    height: 2em;
     margin-top: 2em;
+    font-size: 1em;
 }
