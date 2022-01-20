@@ -3,7 +3,7 @@ import React from 'react'
 export default function Rating({title, setValue}) {
     function handleEvent(e){
         console.log("click!",e.target.value)
-        setValue(e.target.value)
+        setValue(Number(e.target.value))
     }
     return (
         <div className='input-box ratings'>

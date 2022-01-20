@@ -15,12 +15,12 @@ const bootcampData =[
 
 const emptyFeedback ={
     name:"",
-    cohort:"",
+    chort:"",
     date:"",
-    feedback: "",
-    workShopLectures: "",
-    guest: "",
-    mood: "",
-    bootcamperOfWeek: "",
+    dailyFeedBack: "",
+    workShopRating: "",
+    guestLectureRating: "",
+    userFeelingRating: "",
+    bootcamperOfTheWeek: "",
 }
 export {bootcampData , bootcamperData,emptyFeedback }
