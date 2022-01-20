@@ -1,9 +1,10 @@
 .header {
-    background-color: #2C4F40;
+    background-image: linear-gradient(#2F5B3E, #20382E);
     text-align: center;
-    padding: 1em 0em 1em 0em;
+    padding: 0.5em 0em 0.5em 0em;
     color: inherit;
     color: #DAD7CC;
+    font-weight: bold;
     text-decoration: none;
 }
 

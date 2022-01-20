@@ -12,6 +12,8 @@ body {
     color: #2C4F40;
     font-size: 1.5em;
     line-height: 0.5em;
+    min-width: 20em;
+    max-width: 100em;
 }
 
 .links {
@@ -21,8 +23,10 @@ body {
     padding: 3em;
     margin: 1em;
     background-color: #4B8253;
+    box-shadow: 2px 2px 3px #2F5B3E;
     text-decoration: none;
     color: #DAD7CC;
+    text-shadow: 2px 2px 3px #0F2C20;
     font-size: 1em;
     border-radius: 2%;
 }
