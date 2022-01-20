@@ -2,6 +2,7 @@
 
 .feedback-section {
     background-color: #9FB186;
+    box-shadow: 1px 1px 2px #2F5B3E;
     color: #0F2C20;
     display: flex;
     justify-content: center;
