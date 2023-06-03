@@ -6,7 +6,6 @@ import "./style.css";
 export default function BasicDropdown({ title, data, setValue }) {
   const [dataSet, setDataSet] = useState(data);
   function handleEvent(e) {
-    console.log("click!", e.target.value);
     setValue(e.target.value);
   }
   return (

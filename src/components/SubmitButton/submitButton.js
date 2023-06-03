@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 export default function Submit({ postData, link }) {
   // Sending off the data to database
   async function sendPostData(postData) {
-    console.log("POST DATA HERE", postData);
     // const res = await fetch(`${REACT_APP_herokuURLPath}/users/`, {
     //   method: "POST",
     //   body: JSON.stringify(postData),
@@ -13,12 +12,10 @@ export default function Submit({ postData, link }) {
     //   },
     // });
     // const data = await res.json();
-    // console.log(data);
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("handle submit working, here is the post data", postData);
     sendPostData(postData);
   }
 
@@ -26,7 +23,6 @@ export default function Submit({ postData, link }) {
     <div>
       <button className="submit-buttons" type="submit" onClick={handleSubmit}>
         <Link to={link} className="feedbacklink">
-          {" "}
           Submit
         </Link>
       </button>

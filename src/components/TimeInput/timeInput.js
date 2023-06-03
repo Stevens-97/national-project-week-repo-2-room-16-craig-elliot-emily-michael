@@ -2,7 +2,6 @@ import React from "react";
 
 export default function TimeInput({ setValue }) {
   function handleEvent(e) {
-    console.log("click!", e.target.value);
     setValue(e.target.value);
   }
   return (

@@ -42,7 +42,6 @@ export default function FeedbackIndex() {
         userFeelingRating: moodRating,
         bootcamperOfTheWeek: BoTW,
       });
-      console.log(postData);
     }
     updatePostData();
   }, [

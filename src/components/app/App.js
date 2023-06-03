@@ -12,7 +12,6 @@ function App() {
     async function getUrl() {
       const response = await fetch(REACT_APP_herokuURLPath);
       const data = await response.json();
-      console.log(data);
     }
     getUrl();
   }, []);

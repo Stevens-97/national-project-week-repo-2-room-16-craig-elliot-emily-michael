@@ -5,7 +5,6 @@ import { REACT_APP_herokuURLPath } from "../../../config";
 export default function SubmitButton({ postData, link }) {
   // Sending off the data to database
   async function sendPostData(postData) {
-    console.log("POST DATA HERE", postData);
     const res = await fetch(`${REACT_APP_herokuURLPath}/AnonymousFeedback/`, {
       method: "POST",
       body: JSON.stringify(postData),
@@ -14,12 +13,10 @@ export default function SubmitButton({ postData, link }) {
       },
     });
     const data = await res.json();
-    console.log(data);
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("handle submit working, here is the post data", postData);
     sendPostData(postData);
   }
 
@@ -27,7 +24,6 @@ export default function SubmitButton({ postData, link }) {
     <div>
       <button className="submit-buttons" type="submit" onClick={handleSubmit}>
         <Link to={link} className="feedbacklink">
-          {" "}
           Submit
         </Link>
       </button>
