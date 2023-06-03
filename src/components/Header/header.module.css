@@ -1,14 +1,26 @@
 .header {
-    background-image: linear-gradient(#2F5B3E, #20382E);
-    text-align: center;
-    padding: 0.5em 0em 0.5em 0em;
-    color: inherit;
-    color: #DAD7CC;
-    font-weight: bold;
-    text-decoration: none;
+  background-image: linear-gradient(#2f5b3e, #20382e);
+  text-align: center;
+  padding: 0.5em 0em 0.5em 0em;
+  color: inherit;
+  color: #dad7cc;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .homelink {
-    text-decoration: none;
-    color: #DAD7CC;
+  text-decoration: none;
+  color: #dad7cc;
+}
+
+.navigationLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.navigationLink {
+  margin-left: 16px;
+  font-size: 26px;
 }

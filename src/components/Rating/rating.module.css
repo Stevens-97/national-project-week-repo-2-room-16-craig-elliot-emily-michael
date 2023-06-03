@@ -1,0 +1,15 @@
+.ratings {
+  display: inline;
+  width: 14em;
+  /* background-color: black;  */
+}
+
+.rating-emojis {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-inputs {
+  display: flex;
+  justify-content: space-evenly;
+}
