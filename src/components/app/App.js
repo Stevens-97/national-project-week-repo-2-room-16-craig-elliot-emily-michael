@@ -1,8 +1,9 @@
 import React from "react";
+import ResourcePage from "../ResourcePage/resourcePage";
+import HomePage from "../HomePage/homePage";
 import { Routes, Route, Link } from "react-router-dom";
 import Header from "../Header";
 import FeedbackIndex from "../FeedbackSection";
-import ResourceLinksWrapper from "../ResourceLinksWrapper";
 import AnonymousFeedbackSection from "../AnonymousFeedbackSection";
 import { REACT_APP_herokuURLPath } from "../../config";
 
@@ -23,9 +24,13 @@ function App() {
         <Header />
       </nav>
       <Routes>
-        <Route path="/" element={<ResourceLinksWrapper />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/resources" element={<ResourcePage />} />
         <Route path="/feedback" element={<FeedbackIndex />} />
-        <Route path="/AnonymousFB" element={<AnonymousFeedbackSection />} />
+        <Route
+          path="/anonymous-feed-back"
+          element={<AnonymousFeedbackSection />}
+        />
       </Routes>
       <div className="App"></div>
     </div>
