@@ -1,24 +1,15 @@
 import React from "react";
-import FeedbackHeader from "../FeedbackHeader";
 import ResourceLinks from "../ResourceLinks";
 import resourceMockData from "../../libs/resourceMockData";
 
+import styles from "./resourceLinksWrapper.module.css";
+
 export default function ResourceLinksWrapper() {
+  const { wrapper } = styles;
+
   const resourceSection = resourceMockData.map((resources) => {
     return <ResourceLinks resources={resources} />;
   });
 
-  return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-      }}
-    >
-      <FeedbackHeader />
-      {resourceSection}
-    </div>
-  );
+  return <div className={wrapper}>{resourceSection}</div>;
 }
