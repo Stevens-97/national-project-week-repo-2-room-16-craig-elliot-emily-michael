@@ -1,0 +1,10 @@
+.dropdown {
+  width: 25em;
+}
+
+.inputBox {
+  width: 25em;
+  max-width: 25em;
+  min-width: 25em;
+  background-color: #dad7cc;
+}

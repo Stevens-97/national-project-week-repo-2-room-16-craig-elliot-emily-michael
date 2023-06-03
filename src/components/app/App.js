@@ -1,11 +1,12 @@
 import React from "react";
-import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import Header from "../Header";
 import FeedbackIndex from "../FeedbackSection";
 import ResourceLinksWrapper from "../ResourceLinksWrapper";
 import AnonymousFeedbackSection from "../AnonymousFeedbackSection";
 import { REACT_APP_herokuURLPath } from "../../config";
+
+import styles from "./App.module.css";
 
 function App() {
   React.useEffect(() => {

@@ -4,10 +4,15 @@ import SubmitButton from "./SubmitButton/index.js";
 import Title from "../Title";
 import TimeInput from "../TimeInput";
 import { emptyAnonFeedback } from "../../libs/data.js";
+
+import styles from "./AnonymousFeedbackSection.module.css";
+
 export default function AnonymousFeedbackSection() {
   const [data, setData] = useState(emptyAnonFeedback);
   const [time, setTime] = useState("");
   const [givenFeedback, setGivenFeedback] = useState("");
+
+  const { feedbackSection } = styles;
 
   useEffect(() => {
     function compileData() {
@@ -17,7 +22,7 @@ export default function AnonymousFeedbackSection() {
   }, [time, givenFeedback]);
 
   return (
-    <div className="feedback-section">
+    <div className={feedbackSection}>
       <Title text={"Thanks For Giving Your Feedback!"} />
       <TimeInput setValue={setTime} />
       <Feedback

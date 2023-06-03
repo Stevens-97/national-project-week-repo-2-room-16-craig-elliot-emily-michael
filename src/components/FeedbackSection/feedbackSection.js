@@ -4,7 +4,6 @@ import Title from "../Title";
 //import Dropdown from './Dropdown/index.js'
 import TimeInput from "../TimeInput";
 import Feedback from "../Feedback/";
-import "./FeedbackSection.css";
 import Rating from "../Rating";
 import {
   bootcampData,
@@ -14,7 +13,11 @@ import {
 import BasicDropdown from "../BasicDropdown";
 import Submit from "../SubmitButton";
 
+import styles from "./FeedbackSection.module.css";
+
 export default function FeedbackIndex() {
+  const { feedbackSection, input } = styles;
+
   const [bootcampers, setBootcampers] = useState(bootcamperData);
   const [bootcamps, setBootcamps] = useState(bootcampData);
   // Form collection
@@ -56,19 +59,19 @@ export default function FeedbackIndex() {
   ]);
 
   return (
-    <div className="feedback-section">
+    <div className={feedbackSection}>
       <Title text={"Feedback For The Day"} />
       <BasicDropdown
         setValue={setBootcamper}
         title={"Name"}
         data={bootcampers}
-        className="first-inputs"
+        className={input}
       />
       <BasicDropdown
         setValue={setBootcamp}
         title={"Cohort"}
         data={bootcamps}
-        className="first-inputs"
+        className={input}
       />
       <TimeInput setValue={setTodaysDate} className="first-inputs" />
       <Feedback setValue={setFeedbackInput} text={"Daily Feedback"} />
