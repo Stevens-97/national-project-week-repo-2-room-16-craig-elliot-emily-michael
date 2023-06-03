@@ -1,1 +1,1 @@
-export { default } from "./ResourceLinks";
+export { default } from "./resourceLinks";

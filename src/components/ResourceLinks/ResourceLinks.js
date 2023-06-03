@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./ResourceLinks.module.css";
+import styles from "./resourceLinks.module.css";
 
 export default function ResourceLinks({ resources }) {
   const { links, helpBox, heading } = styles;
