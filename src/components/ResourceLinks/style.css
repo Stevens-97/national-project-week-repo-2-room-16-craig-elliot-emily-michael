@@ -1,46 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap");
 
 body {
-    font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .help-box {
-    background-color: #9FB186;
-    text-align: center;
-    margin: 2em;
-    padding: 0.2em 0em 0.2em 0em;
-    color: #2C4F40;
-    box-shadow: 1px 1px 2px #2F5B3E;
-    font-size: 1.5em;
-    line-height: 0.5em;
-    min-width: 50em;
-    max-width: 100em;
+  background-color: #9fb186;
+  text-align: center;
+  margin: 2em;
+  color: #2c4f40;
+  box-shadow: 1px 1px 2px #2f5b3e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 800px;
+  height: auto;
+}
+
+.title {
+  font-size: 1.5em;
+  height: auto;
+  background-color: inherit;
+  margin: 12px 0 0 0;
 }
 
 .links {
-    flex-direction: row;
-    display: inline-flex;
-    justify-content: space-around;
-    padding: 3em;
-    margin: 1em;
-    background-color: #4B8253;
-    box-shadow: 2px 2px 3px #2F5B3E;
-    text-decoration: none;
-    color: #DAD7CC;
-    text-shadow: 2px 2px 3px #0F2C20;
-    font-size: 1em;
-    border-radius: 2%;
+  flex-direction: row;
+  display: inline-flex;
+  justify-content: space-around;
+  padding: 3em;
+  margin: 1em;
+  background-color: #4b8253;
+  box-shadow: 2px 2px 3px #2f5b3e;
+  text-decoration: none;
+  color: #dad7cc;
+  text-shadow: 2px 2px 3px #0f2c20;
+  font-size: 1em;
+  border-radius: 2%;
 }
 
 a:link {
-    text-decoration: none;
-    color: #DAD7CC;
+  text-decoration: none;
+  color: #dad7cc;
 }
 
 a:visited {
-    color: #DAD7CC;
+  color: #dad7cc;
 }
 
 a:hover {
-    color: #2C4F40;
+  color: #2c4f40;
 }
