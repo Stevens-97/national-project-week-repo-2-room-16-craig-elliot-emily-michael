@@ -83,7 +83,7 @@ export default function FeedbackIndex() {
         title={"Bootcamper of The Week"}
         data={bootcampers}
       />
-      <Submit link={"/AnonymousFB"} postData={postData} />
+      <Submit link={"/anonymous-feed-back"} postData={postData} />
     </div>
   );
 }
