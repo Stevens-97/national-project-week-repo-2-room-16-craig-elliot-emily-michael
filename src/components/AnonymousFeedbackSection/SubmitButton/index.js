@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { REACT_APP_herokuURLPath } from "../../../config";
 
-export default function Submit({ postData, link }) {
+export default function SubmitButton({ postData, link }) {
   // Sending off the data to database
   async function sendPostData(postData) {
     console.log("POST DATA HERE", postData);
-    const res = await fetch(`${REACT_APP_herokuURLPath}/users/`, {
+    const res = await fetch(`${REACT_APP_herokuURLPath}/AnonymousFeedback/`, {
       method: "POST",
       body: JSON.stringify(postData),
       headers: {
