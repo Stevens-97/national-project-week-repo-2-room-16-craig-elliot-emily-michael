@@ -1,14 +1,13 @@
 .feedbackHeader {
-    background-image: linear-gradient(#4B8253, #2F5B3E);
-    box-shadow: 2px 2px 3px #2F5B3E;
+    background-image: linear-gradient(#4b8253, #2f5b3e);
+    box-shadow: 2px 2px 3px #2f5b3e;
     text-align: center;
     margin: 2em;
     padding: 0.3em 0em 0.3em 0em;
-    min-width: 75em;
-    max-width: 100em;
+    width: 100%;
 }
 
 .feedbacklink {
     text-decoration: none;
-    color: #DAD7CC;
+    color: #dad7cc;
 }
