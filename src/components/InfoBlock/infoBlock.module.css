@@ -1,5 +1,63 @@
 .textWrapper {
+    position: relative;
+    width: 750px;
+    min-height: 200px;
+    height: auto;
+    background-color: #9fb186;
+    background-image: linear-gradient(#4b8253, #2f5b3e);
+    box-shadow: 1px 1px 2px #121f14;
+}
+
+.imageWrapper img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 65%;
 }
 
 .imageWrapper {
+    display: flex;
+    align-self: center;
+    height: auto;
+}
+
+.wrapper {
+    position: relative;
+    /* width: 1170px; */
+    min-height: 200px;
+    height: auto;
+    outline: 1px solid red;
+    display: flex;
+    flex-direction: row;
+}
+
+.textWrapper p {
+    margin-bottom: 25px;
+    outline: 1px solid red;
+}
+
+.wrapperLeftAligned {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.wrapperRightAligned {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    align-self: flex-end;
+}
+
+.wrapperCenterAligned {
+    display: flex;
+    align-self: center;
+}
+
+@media only screen and (max-width: 765px) {
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        outline: 1px solid blue;
+        margin: 0;
+        width: 500px;
+    }
 }
