@@ -1,0 +1,31 @@
+.wrapperRightAligned {
+    display: flex;
+    justify-content: center;
+    margin-right: 300px;
+}
+
+.wrapperLeftAligned {
+    display: flex;
+    justify-content: center;
+    margin-left: 300px;
+}
+
+.wrapperCenterAligned {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapperRightAligned,
+.wrapperLeftAligned,
+.wrapperCenterAligned {
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 765px) {
+    .wrapperRightAligned,
+    .wrapperLeftAligned,
+    .wrapperCenterAligned {
+        display: flex;
+        justify-content: center;
+    }
+}
