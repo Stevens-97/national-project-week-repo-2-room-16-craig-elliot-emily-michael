@@ -6,9 +6,9 @@ export default function ResourceLinks({ resources }) {
   const { tutorials, title } = resources;
 
   const resourceSection = resources
-    ? tutorials.map((tutorial) => {
+    ? tutorials.map((tutorial, index) => {
         return (
-          <div className={links}>
+          <div className={links} key={`tutorial-${index}`}>
             <a
               href={tutorial?.videoUrl}
               target="_blank"
