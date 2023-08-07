@@ -54,7 +54,7 @@ a:hover {
 .resourceWrapper {
   display: flex;
   flex-direction: row;
-  overflow-x: scroll;
+  overflow-x: auto;
   justify-content: center;
 }
 
