@@ -1,13 +1,11 @@
 .wrapperRightAligned {
     display: flex;
     justify-content: center;
-    margin-right: 300px;
 }
 
 .wrapperLeftAligned {
     display: flex;
     justify-content: center;
-    margin-left: 300px;
 }
 
 .wrapperCenterAligned {
@@ -22,6 +20,7 @@
 }
 
 @media only screen and (max-width: 765px) {
+
     .wrapperRightAligned,
     .wrapperLeftAligned,
     .wrapperCenterAligned {
