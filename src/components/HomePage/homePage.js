@@ -1,9 +1,7 @@
 import React from "react";
 import InfoBlock from "../InfoBlock/infoBlock";
 import {
-    firstMockInfoBlock,
-    secondMockInfoBlock,
-    thirdMockInfoBlock,
+    mockInfoBlock
 } from "../../libs/infoBlockMockData";
 import CallToAction from "../CallToAction/callToAction";
 
@@ -15,25 +13,11 @@ export default function HomePage() {
     return (
         <div>
             <CallToAction />
-            <div className={wrapperLeftAligned}>
-                <InfoBlock
-                    text={firstMockInfoBlock.text}
-                    imageUrl={firstMockInfoBlock.imageUrl}
-                    position="right"
-                />
-            </div>
-            <div className={wrapperRightAligned}>
-                <InfoBlock
-                    text={secondMockInfoBlock.text}
-                    imageUrl={secondMockInfoBlock.imageUrl}
-                />
-            </div>
-            <div className={wrapperLeftAligned}>
-                <InfoBlock
-                    text={thirdMockInfoBlock.text}
-                    imageUrl={thirdMockInfoBlock.imageUrl}
-                />
-            </div>
+            {mockInfoBlock.map((info, index) => <InfoBlock
+                text={info.text}
+                imageUrl={info.imageUrl}
+                key={`info-block-${index}`}
+            />)}
         </div>
     );
 }
