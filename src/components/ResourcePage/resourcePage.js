@@ -1,5 +1,5 @@
 import React from "react";
-import ResourceLinksWrapper from "../ResourceLinksWrapper/resourceLinksWrapper";
+import ResourceLinksWrapper from "../ResourceLinksWrapper";
 
 export default function ResourcePage() {
   return (
