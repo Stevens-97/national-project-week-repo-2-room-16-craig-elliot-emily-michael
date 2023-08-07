@@ -4,11 +4,12 @@
   margin: 2em;
   color: #2c4f40;
   box-shadow: 1px 1px 2px #2f5b3e;
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: center;
-  width: 800px;
+  width: 100%;
   height: auto;
+  flex-basis: initial;
 }
 
 .heading {
@@ -20,7 +21,8 @@
 
 .links {
   flex-direction: row;
-  display: inline-flex;
+  display: flex;
+  flex: 0 0 100%;
   justify-content: space-around;
   padding: 3em;
   margin: 1em;
@@ -31,10 +33,13 @@
   text-shadow: 2px 2px 3px #0f2c20;
   font-size: 1em;
   border-radius: 2%;
+  max-width: 50px;
 }
 
 a:link {
   text-decoration: none;
+  display: flex;
+  align-items: center;
   color: #dad7cc;
 }
 
@@ -44,4 +49,17 @@ a:visited {
 
 a:hover {
   color: #bab7ab;
+}
+
+.resourceWrapper {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 486px) {
+  .resourceWrapper {
+    justify-content: flex-start;
+  }
 }
