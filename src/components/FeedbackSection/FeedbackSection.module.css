@@ -6,10 +6,10 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin: 2em 15em;
+  margin: 50px auto;
   padding-bottom: 3em;
   font-size: 1.5em;
-  min-width: 22em;
+  width: 350px;
   text-align: center;
   border-radius: 2%;
 }
@@ -25,15 +25,25 @@ h2 {
 }
 
 .input {
-  text-align: left;
-  justify-content: left;
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fafafa;
+  border: 0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  transition: .3s box-shadow;
 }
 
 .input-box {
-  width: 25em;
-  max-width: 25em;
-  min-width: 25em;
-  background-color: #dad7cc;
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fafafa;
+  border: 0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  transition: .3s box-shadow;
 }
 
 .submit-buttons {
