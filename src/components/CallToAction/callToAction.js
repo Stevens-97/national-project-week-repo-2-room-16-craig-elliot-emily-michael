@@ -2,12 +2,13 @@ import React from "react";
 import styling from "./callToAction.module.css";
 
 export default function CallToAction() {
-    const { imageWrapper, textWrapper, wrapper, text } = styling;
+    const { imageWrapper, textWrapper, wrapper, text, image } = styling;
 
     return (
         <div className={wrapper}>
             <div className={imageWrapper}>
                 <img
+                    className={image}
                     src="/static/computer_on_desk.jpg"
                     alt="computer-on-desk"
                     width={"auto"}
