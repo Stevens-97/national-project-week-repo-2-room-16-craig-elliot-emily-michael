@@ -10,13 +10,13 @@ import { REACT_APP_herokuURLPath } from "../../config";
 import styles from "./App.module.css";
 
 function App() {
-  React.useEffect(() => {
-    async function getUrl() {
-      const response = await fetch(REACT_APP_herokuURLPath);
-      const data = await response.json();
-    }
-    getUrl();
-  }, []);
+  // React.useEffect(() => {
+  //   async function getUrl() {
+  //     const response = await fetch(REACT_APP_herokuURLPath);
+  //     const data = await response.json();
+  //   }
+  //   getUrl();
+  // }, []);
 
   return (
     <div>

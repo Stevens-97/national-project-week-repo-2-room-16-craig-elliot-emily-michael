@@ -32,31 +32,31 @@ export default function FeedbackIndex() {
   // Form Data pooling
   const [postData, setPostData] = useState(emptyFeedback);
 
-  useEffect(() => {
-    function updatePostData() {
-      setPostData({
-        ...postData,
-        name: bootcamper,
-        chort: bootcamp,
-        date: todaysDate,
-        dailyFeedBack: feedbackInput,
-        workShopRating: workShopLectures,
-        guestLectureRating: guestRating,
-        userFeelingRating: moodRating,
-        bootcamperOfTheWeek: BoTW,
-      });
-    }
-    updatePostData();
-  }, [
-    feedbackInput,
-    bootcamper,
-    bootcamp,
-    todaysDate,
-    workShopLectures,
-    guestRating,
-    moodRating,
-    BoTW,
-  ]);
+  // useEffect(() => {
+  //   function updatePostData() {
+  //     setPostData({
+  //       ...postData,
+  //       name: bootcamper,
+  //       chort: bootcamp,
+  //       date: todaysDate,
+  //       dailyFeedBack: feedbackInput,
+  //       workShopRating: workShopLectures,
+  //       guestLectureRating: guestRating,
+  //       userFeelingRating: moodRating,
+  //       bootcamperOfTheWeek: BoTW,
+  //     });
+  //   }
+  //   updatePostData();
+  // }, [
+  //   feedbackInput,
+  //   bootcamper,
+  //   bootcamp,
+  //   todaysDate,
+  //   workShopLectures,
+  //   guestRating,
+  //   moodRating,
+  //   BoTW,
+  // ]);
 
   return (
     <div className={feedbackSection}>
