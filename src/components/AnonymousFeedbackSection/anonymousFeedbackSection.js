@@ -1,35 +1,41 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Feedback from "../Feedback";
-import SubmitButton from "./SubmitButton/index.js";
+import SubmitButton from "../SubmitButton";
 import Title from "../Title";
 import TimeInput from "../TimeInput";
-import { emptyAnonFeedback } from "../../libs/data.js";
+import { anonData } from "../../libs/questionData";
 
 import styles from "./AnonymousFeedbackSection.module.css";
 
 export default function AnonymousFeedbackSection() {
-  const [data, setData] = useState(emptyAnonFeedback);
-  const [time, setTime] = useState("");
-  const [givenFeedback, setGivenFeedback] = useState("");
+    const [answer, setAnswer] = useState({});
 
-  const { feedbackSection } = styles;
+    const [answerRequired, setAnswerRequired] = useState(false);
 
-  useEffect(() => {
-    function compileData() {
-      setData({ ...data, date: time, feedback: givenFeedback });
-    }
-    compileData();
-  }, [time, givenFeedback]);
+    const { feedbackSection } = styles;
 
-  return (
-    <div className={feedbackSection}>
-      <Title text={"Thanks For Giving Your Feedback!"} />
-      <TimeInput setValue={setTime} />
-      <Feedback
-        setValue={setGivenFeedback}
-        text={"Anything else? This is anonymous."}
-      />
-      <SubmitButton postData={data} link={"/"} />
-    </div>
-  );
+    return (
+        <div className={feedbackSection}>
+            <Title text={"Thanks For Giving Your Feedback!"} />
+            <TimeInput
+                setValue={setAnswer}
+                value={answer}
+                title={anonData[0]?.title}
+                index={anonData[0]?.index}
+                setAnswerRequired={setAnswerRequired}
+            />
+            <br></br>
+            <Feedback
+                setValue={setAnswer}
+                value={answer}
+                title={anonData[1]?.title}
+                index={anonData[1]?.index}
+            />
+            <SubmitButton
+                postData={answer}
+                link={"/"}
+                disabled={answerRequired}
+            />
+        </div>
+    );
 }
