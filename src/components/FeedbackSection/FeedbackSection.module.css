@@ -1,56 +1,75 @@
+:root {
+    --feedback-section-width: 500px;
+    --feedback-section-margin: 100px auto;
+}
+
 .feedbackSection {
-  background-color: #9fb186;
-  box-shadow: 1px 1px 2px #2f5b3e;
-  color: #0f2c20;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin: 50px auto;
-  padding-bottom: 3em;
-  font-size: 1.5em;
-  width: 350px;
-  text-align: center;
-  border-radius: 2%;
+    background-color: #9fb186;
+    box-shadow: 1px 1px 2px #2f5b3e;
+    color: #0f2c20;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: var(--feedback-section-margin);
+    padding-bottom: 3em;
+    font-size: 1.5em;
+    width: var(--feedback-section-width);
+    height: 180px;
+    text-align: center;
+    border-radius: 2%;
 }
 
-h1 {
-  text-shadow: 2px 2px 3px #0f2c20;
-  font-size: 3em;
+.questionBox h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-h2 {
-  font-size: 1.5em;
-  text-shadow: 1px 1px 2px #0f2c20;
+.button {
+    background-color: #9fb186;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 0;
+    flex: 1;
+    color: #fff;
 }
 
-.input {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #fafafa;
-  border: 0;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-  transition: .3s box-shadow;
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 73px;
+    width: 100%;
 }
 
-.input-box {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #fafafa;
-  border: 0;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-  transition: .3s box-shadow;
+.button:disabled {
+    background-color: #666666;
+    cursor: not-allowed;
 }
 
-.submit-buttons {
-  background-color: #2f5b3e;
-  width: 7em;
-  height: 2em;
-  margin-top: 2em;
-  font-size: 1em;
-  border-radius: 5%;
+.button:hover {
+    background-color: #20382e;
+}
+
+.navigationButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --feedback-section-width: 300px;
+        --feedback-section-margin: 50px auto 200px;
+    }
 }
