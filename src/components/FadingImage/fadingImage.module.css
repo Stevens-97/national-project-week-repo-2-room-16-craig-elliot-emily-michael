@@ -1,0 +1,16 @@
+.fadingImageContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Make the container take up the entire viewport height */
+    overflow: hidden;
+}
+
+.fadingImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    transition: opacity 0.5s ease; /* Add a smooth fade transition */
+}
