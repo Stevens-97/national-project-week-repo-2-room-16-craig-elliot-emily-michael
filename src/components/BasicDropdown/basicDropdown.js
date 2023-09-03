@@ -1,26 +1,41 @@
-import React from "react";
-import { useState } from "react";
+import React, { useEffect } from "react";
 import DropdownInput from "../DropdownInput";
 import styles from "./basicDropdown.module.css";
 
-export default function BasicDropdown({ title, data, setValue }) {
-  const { inputBox } = styles;
+export default function BasicDropdown({ title, data, setValue, index, value }) {
+    const { inputBox, dropdownSection } = styles;
 
-  const [dataSet, setDataSet] = useState(data);
+    function handleEvent(e) {
+        setValue((prevState) => {
+            const updatedState = { ...prevState };
+            updatedState[`answer-${index}`] = e.target.value;
+            return updatedState;
+        });
+    }
 
-  function handleEvent(e) {
-    setValue(e.target.value);
-  }
+    useEffect(() => {
+        if (!value?.[[`answer-${index}`]]) {
+            setValue((prevState) => {
+                const updatedState = { ...prevState };
+                updatedState[`answer-${index}`] = data[0];
+                return updatedState;
+            });
+        }
+    }, []);
 
-  return (
-    <div>
-      <label for={title}>{title}</label>
-      <br></br>
-      <select red="theInput" className={inputBox} onClick={handleEvent}>
-        {dataSet.map((item) => {
-          return <DropdownInput value={item.value} />;
-        })}
-      </select>
-    </div>
-  );
+    return (
+        <div className={dropdownSection}>
+            <label for={title}>{title}</label>
+            <select red="theInput" className={inputBox} onClick={handleEvent}>
+                {data.map((item, key) => {
+                    return (
+                        <DropdownInput
+                            value={item}
+                            key={`drop-down-input-${key}`}
+                        />
+                    );
+                })}
+            </select>
+        </div>
+    );
 }
