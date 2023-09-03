@@ -1,0 +1,30 @@
+.submitButton {
+    background-color: #20382e;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 0;
+    flex: 1;
+    color: #fff;
+    text-decoration: none;
+}
+
+.submitButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    width: 50%;
+}
+
+.submitButtonContainer a {
+    text-decoration: none;
+}
+
+.submitButton:hover {
+    background-color: #192c24;
+}
