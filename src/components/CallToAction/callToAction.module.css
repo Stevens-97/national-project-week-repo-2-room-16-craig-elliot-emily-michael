@@ -1,36 +1,34 @@
 :root {
-    --call-to-action-first-text-font-size: 40px;
-    --call-to-action-text-font-size: 30px;
+    --call-to-action-first-text-font-size: 70px;
+    --call-to-action-text-font-size: 50px;
     --call-to-action-image-height: 350px;
+    --call-to-action-text-wrapper-padding: 0 100px 0;
+    --call-to-action-wrapper-padding: 0 100px 0;
 }
 
 .wrapper {
-    position: relative;
-    width: 100%;
+    position: absolute;
+    top: 600px;
     height: 350px;
-    margin: 40px auto 0;
-    background-color: #9fb186;
-    background-image: linear-gradient(#4b8253, #2f5b3e);
-    box-shadow: 1px 1px 2px #121f14;
     display: flex;
-    justify-content: center;
-    margin-right: 200px;
+    padding: var(--call-to-action-wrapper-padding);
 }
 
 .textWrapper {
     position: relative;
     display: flex;
     height: 350px;
+    max-width: 800px;
     justify-content: center;
     flex-direction: column;
-    padding-left: 20px;
+    text-align: center;
+    padding: var(--call-to-action-text-wrapper-padding);
 }
 
 .imageWrapper {
     display: flex;
     justify-content: center;
     justify-self: center;
-    margin-left: auto;
 }
 
 .image {
@@ -47,7 +45,25 @@
 
 .text:first-child {
     font-size: var(--call-to-action-first-text-font-size);
-    color: #dad7cc;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #9fb186;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+@media only screen and (max-width: 1200px) {
+    :root {
+        --call-to-action-first-text-font-size: 50px;
+        --call-to-action-text-font-size: 30px;
+        --call-to-action-image-height: 250px;
+        --call-to-action-text-wrapper-padding: 0 50px 0;
+        --call-to-action-wrapper-padding: 0 50px 0;
+    }
 }
 
 @media only screen and (max-width: 765px) {
@@ -55,6 +71,7 @@
         --call-to-action-first-text-font-size: 30px;
         --call-to-action-text-font-size: 20px;
         --call-to-action-image-height: 200px;
+        --call-to-action-text-wrapper-padding: 0;
     }
 
     .image {
