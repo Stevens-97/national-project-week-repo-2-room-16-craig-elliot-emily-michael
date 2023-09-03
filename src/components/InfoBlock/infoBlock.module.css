@@ -12,12 +12,12 @@
 }
 
 .textWrapper {
-    position: relative;
+    /* position: relative;
     min-height: 200px;
     height: auto;
     display: flex;
     align-items: center;
-    padding: var(--info-block-text-wrapper-padding);
+    padding: var(--info-block-text-wrapper-padding); */
 }
 
 .tab {
@@ -27,7 +27,6 @@
     display: flex;
     align-self: center;
     box-shadow: -6px 3px 8px -3px #000000;
-
 }
 
 .image {
@@ -50,7 +49,12 @@
 }
 
 .textBlock {
-    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    color: #9fb186; /* Text color */
+    margin-right: 10px; /* Spacing between tabs */
+    height: 155px;
     font-size: var(--info-block-text-wrapper-font-size);
 }
 
@@ -65,9 +69,7 @@
     .textBlock {
         padding: 10px;
     }
-
 }
-
 
 @media only screen and (max-width: 600px) {
     :root {
@@ -77,7 +79,7 @@
 
     .wrapper {
         flex-direction: column;
-        padding: 0 25px;
+        padding: 0;
     }
 
     .mainWrapper {
