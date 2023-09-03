@@ -1,30 +1,20 @@
-.wrapperRightAligned {
+.infoBlockSection {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Make the container take up the entire viewport height */
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
-.wrapperLeftAligned {
-    display: flex;
-    justify-content: center;
-}
-
-.wrapperCenterAligned {
-    display: flex;
-    justify-content: center;
-}
-
-.wrapperRightAligned,
-.wrapperLeftAligned,
-.wrapperCenterAligned {
-    margin-top: 50px;
+@media only screen and (max-width: 1200px) {
+    .infoBlockSection {
+        margin-top: 200px;
+    }
 }
 
 @media only screen and (max-width: 765px) {
-
-    .wrapperRightAligned,
-    .wrapperLeftAligned,
-    .wrapperCenterAligned {
-        display: flex;
-        justify-content: center;
+    .infoBlockSection {
+        margin-top: 500px;
     }
 }
