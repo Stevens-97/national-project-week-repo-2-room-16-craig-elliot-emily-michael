@@ -7,7 +7,6 @@ body {
 }
 
 body {
-
     max-width: 100%;
 
     margin: 0;
@@ -37,4 +36,14 @@ a {
 p {
     font-size: 22px;
     font-weight: 600;
+}
+
+h1 {
+    text-shadow: 2px 2px 3px #0f2c20;
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px #0f2c20;
 }
