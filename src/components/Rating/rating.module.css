@@ -1,14 +1,66 @@
 .ratings {
-  display: inline;
-  width: 14em;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.rating-emojis {
-  display: flex;
-  justify-content: space-between;
+.ratingEmojis {
+    display: flex;
+    justify-content: space-between;
 }
 
-.rating-inputs {
-  display: flex;
-  justify-content: space-evenly;
+.ratingInputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+.label {
+    width: 400px; /* Adjust the width as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center-align the text within the fixed width */
+    margin: 0 auto;
+}
+
+.inputs input[type="radio"] {
+    position: relative;
+    margin-right: 10px; /* Adjust margin as needed in pixels */
+    cursor: pointer;
+
+    /* Radio button outer circle */
+    &:before {
+        transition: transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+        transform: scale(0);
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 6px; /* Adjust left offset in pixels */
+        z-index: 1;
+        width: 20px; /* Set width in pixels */
+        height: 20px; /* Set height in pixels */
+        border-radius: 50%;
+    }
+
+    /* Checked state for the radio button */
+    &:checked {
+        &:before {
+            transform: scale(1);
+        }
+    }
+
+    /* Radio button inner dot */
+    &:after {
+        content: "";
+        position: absolute;
+        top: -4px; /* Adjust top offset in pixels */
+        left: -2px; /* Adjust left offset in pixels */
+        width: 10px; /* Set width in pixels */
+        height: 10px; /* Set height in pixels */
+        background: #fff;
+        border-radius: 50%;
+    }
 }

@@ -1,57 +1,64 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styling from "./rating.module.css";
 
-export default function Rating({ title, setValue }) {
-  const { ratings, ratingInputWrapper, ratingEmojis } = styling;
-  function handleEvent(e) {
-    setValue(Number(e.target.value));
-  }
-  return (
-    <div className={ratings}>
-      <form>
-        <p>{title}</p>
-        <div className={ratingInputWrapper}>
-          <input
-            onChange={handleEvent}
-            type="radio"
-            id="1"
-            name={title}
-            value="1"
-          />
-          <input
-            onChange={handleEvent}
-            type="radio"
-            id="2"
-            name={title}
-            value="2"
-          />
-          <input
-            onChange={handleEvent}
-            type="radio"
-            id="3"
-            name={title}
-            value="3"
-          />
-          <input
-            onChange={handleEvent}
-            type="radio"
-            id="4"
-            name={title}
-            value="4"
-          />
-          <input
-            onChange={handleEvent}
-            type="radio"
-            id="5"
-            name={title}
-            value="5"
-          />
+export default function Rating({ title, setValue, index, value }) {
+    const { ratings, ratingInputs, ratingEmojis, inputs, label } = styling;
+
+    // Use local state to manage the selected rating for this component
+    const [selectedRating, setSelectedRating] = useState(3);
+
+    // Function to handle rating changes
+    function handleEvent(e) {
+        const newRating = Number(e.target.value);
+        setSelectedRating(newRating);
+        setValue((prevState) => {
+            const updatedState = { ...prevState };
+            updatedState[`answer-${index}`] = newRating;
+            return updatedState;
+        });
+    }
+
+    useEffect(() => {
+        if (!value?.[[`answer-${index}`]]) {
+            setValue((prevState) => {
+                const updatedState = { ...prevState };
+                updatedState[`answer-${index}`] = 3;
+                return updatedState;
+            });
+        }
+    }, [index]);
+
+    // Set the selected rating to the value from props when the component mounts
+    useEffect(() => {
+        setSelectedRating(value?.[`answer-${index}`] || 3);
+    }, [index, value]);
+
+    const radioButtons = [1, 2, 3, 4, 5].map((value) => (
+        <label key={value}>
+            <input
+                className={inputs}
+                onChange={handleEvent}
+                type="radio"
+                id={value.toString()}
+                name={title}
+                value={value.toString()}
+                checked={selectedRating === value}
+            />
+        </label>
+    ));
+
+    return (
+        <div className={ratings}>
+            <form>
+                <label className={label} htmlFor={title}>
+                    {title}
+                </label>{" "}
+                <div className={ratingInputs}>{radioButtons}</div>
+                <div className={ratingEmojis}>
+                    <label htmlFor="1">🙃</label>
+                    <label htmlFor="5">🙂</label>
+                </div>
+            </form>
         </div>
-        <div className={ratingEmojis}>
-          <label for="1">🙃</label>
-          <label for="5">🙂</label>
-        </div>
-      </form>
-    </div>
-  );
+    );
 }
